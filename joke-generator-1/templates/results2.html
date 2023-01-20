@@ -1,0 +1,17 @@
+{% extends "index.html" %} {% block content %}
+<head>
+  <script src="{{ url_for('static', filename = 'results.js') }}"></script>
+<script>
+    let jokes = {{ jokes | tojson }};
+</script>
+</head>
+<body>
+<!-- <div id="loader" class="center"></div> -->
+<div class="container">
+  <div id="joke_meaning"></div>
+    <div id="list_results"></div>
+  <button type="button" id="more_jokes" class="btn btn-primary joke">More Jokes</button>
+</div>
+</body>
+
+{% endblock %}

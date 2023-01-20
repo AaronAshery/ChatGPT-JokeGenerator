@@ -1,0 +1,33 @@
+{% extends "index.html" %} {% block content %}
+<script src="{{ url_for('static', filename = 'index.js') }}"></script>
+<body>
+<!-- <div id="loader" class="center"></div> -->
+<div class="container">
+ <div class="card"> <div class="mb-3">
+    <label class="form-label">Topic</label>
+    <input
+      type="text"
+      class="form-control"
+      id="topic_input"
+      placeholder="Animals"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Audience</label>
+    <input
+      type="email"
+      class="form-control"
+      id="audience_input"
+      placeholder="Students"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Approx. Age</label>
+    <input type="email" class="form-control" id="age_input" placeholder="14" />
+  </div>
+  <button type="button" class="btn btn-primary" id="get_results" href="/results">Submit</button>
+</div>
+</div>
+</body>
+
+{% endblock %}
